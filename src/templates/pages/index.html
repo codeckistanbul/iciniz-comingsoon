@@ -1,28 +1,29 @@
 {% extends "layouts/layout.index.html" %}
 {% block content %}
-
-<div class="background">
-    <div class="mainBlock">
-        <div class="leftSide">
-            <p class="leftTextFirst">Yeni nesil online içecek pazaryeri</p>
-            <p class="leftTextSecond">Yakında Sizlerle</p>
+<div id="particles-js"></div>
+<section>
+    <div class="center">
+        <div class="text grow">
+            <h1 class="smallTitle wow fadeInLeftBig" data-wow-delay="0.2s">Yeni nesil online içecek pazaryeri</h1>
+            <h2 class="bigTitle wow fadeInLeftBig" data-wow-delay="0.3s">Yakında Sizlerle</h2>
         </div>
-        <div class="rightSide">
-            <img src="../../assets/img/iciniz-logo.png" alt="">
-        </div>
-    </div>
-    <div class="bottomItems">
-        <div class="communicationBlock">
-        <p class="communication">İletişim : </p><a class="phoneNumber" href="tel:0 (544) 565 18 85">0 (544) 565 18 85</a>
-        </div>
-        <div class="centerLogo"><img src="../../assets/img/codeck-logo.png" alt=""></div>
-        <div class="socialMedia">
-            <a class="socialMediaItems" href="">Unogo</a>
-            <a class="socialMediaItems" href="">Facebook</a>
-            <a class="socialMediaItems" href="">Linkedin</a>
+        <div class="grow logo wow fadeInRightBig" data-wow-delay="0.6s">
+            <img src="../../assets/img/iciniz-logo.svg" alt="">
         </div>
     </div>
-</div>
 
+    <footer>
+        <div class="bottomBar wow fadeInUp">
+            <span>İletişim: <a href="tel:05445651885">0 (544) 565 18 85</a></span>
+            <span>
+                <img src="../../assets/img/codeck-logo.svg" alt="">
+            </span>
+            <span class="socials">
+                <a href="#">Facebook</a>
+                <a href="#">Linkedin</a>
+            </span>
+        </div>
+    </footer>
+</section>
 
 {% endblock %}

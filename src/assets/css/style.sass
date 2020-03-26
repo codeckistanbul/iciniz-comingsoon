@@ -1,99 +1,135 @@
-$primaryFont : 'Poppins', sans-serif
+@import libs
+$primary-font: all-round-gothic, sans-serif
+$secondary-font: Roboto, sans-serif
 
-/* http://meyerweb.com/eric/tools/css/reset/
- * v2.0 | 20110126
- * License: none (public domain)
+@font-face
+  font-family: 'all-round-gothic'
+  src: url(../../assets/fonts/allroundgothic-book-webfont.eot)
+  src: url(../../assets/fonts/allroundgothic-book-webfont.woff2) format('woff2'),
+  url(../../assets/fonts/allroundgothic-book-webfont.woff) format('woff')
+  font-weight: normal
+  font-style: normal
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
-  margin: 0
-  padding: 0
-  border: 0
-  font-size: 100%
-  font: inherit
-  vertical-align: baseline
-
-/* HTML5 display-role reset for older browsers
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
-  display: block
 
 body
-  line-height: 1
+  background-image: url("../img/background.png")
+  background-position: center center
+  background-attachment: fixed
+  background-size: cover
+  overflow-x: hidden
+  font-family: Poppins, sans-serif
+  color: white
+  min-width: 320px
+  overflow-y: hidden
 
-ol, ul
-  list-style: none
+  a
+    text-decoration: none
 
-blockquote, q
-  quotes: none
-
-blockquote
-  &:before, &:after
-    content: ''
-    content: none
-
-q
-  &:before, &:after
-    content: ''
-    content: none
-
-table
-  border-collapse: collapse
-  border-spacing: 0
-
-
-.mainBlock
+section
   display: flex
+  flex-direction: column
   justify-content: space-between
-  align-items: center
-  padding: 0 50px
-  height: 90vh
+  height: 100vh
+  .center
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 80px 0 80px
+    flex: 1
 
-.leftTextFirst
-  font-family: $primaryFont
-  font-weight: bold
-  font-size: 25px
-  color: #F2B231
+    h1
+      font-size: 24px
+      color: #F2B231
 
-.leftTextSecond
-  font-family: $primaryFont
-  font-weight: bold
-  font-size: 60px
-  color: #545B65
+    h2.bigTitle
+      font-size: 72px
+      color: #545B65
+
+span
+  padding-top: 0
 
 
-.phoneNumber
-  font-family: $primaryFont
-  color: #E22000
-  text-decoration: none
+.bottomBar
   font-size: 20px
-  padding-left: 5px
-
-.communication
-  font-size: 18px
-  font-family: $primaryFont
-  color: #7C7C7C
-
-.communicationBlock
-  display: flex
-
-.bottomItems
-  padding: 0 50px
-
-
-.socialMedia
-  display: flex
-
-
-.socialMediaItems
-  text-decoration: none
-  color: #7C7C7C
-  font-family: $primaryFont
-  padding-left: 15px
-
-
-.bottomItems
+  color: white
+  font-family: $primary-font
   display: flex
   justify-content: space-between
   align-items: center
 
+  span
+    padding: 0 80px 40px 80px
+    color: #7C7C7C
 
+    a, b
+      color: white
+      font-weight: 300
+      color: #E22000
+
+  .socials
+    a
+      color: #7C7C7C
+      margin-right: 20px
+
+      &:last-child
+        margin-right: 0
+
+@media screen and (max-width: 1200px)
+  section
+    .center
+      padding: 0 40px 0 40px
+      .logo
+        text-align: right
+        img
+          max-width: 90%
+  .bottomBar
+    font-size: 14px
+    span
+      padding: 0 40px 40px 40px
+
+@media screen and (max-width: 768px)
+  section
+    .center
+      flex-direction: column-reverse
+      align-items: center
+      justify-content: center
+      text-align: center
+      .logo
+        align-items: start
+        text-align: unset
+      .grow
+        display: flex
+        flex-direction: column
+        justify-content: center
+      .logo
+        flex-grow: 1
+      .text
+        flex-grow: 2
+
+  .bottomBar
+    font-size: 18px
+    flex-direction: column
+    text-align: center
+  img
+    max-width: 100%
+
+@media screen and (max-width: 576px)
+  section
+
+    .text
+      position: unset
+      margin: 60px 0 60px 0
+
+      h1
+        font-size: 16px
+
+  .bottomBar
+    span
+      font-size: 16px
+      padding-bottom: 20px
+
+@media (max-height: 768px)
+  section
+    .text
+      position: unset
+      margin: 40px 0 40px 0
