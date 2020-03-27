@@ -1,6 +1,6 @@
 @import libs
 $primary-font: all-round-gothic, sans-serif
-$secondary-font: Roboto, sans-serif
+$secondary-font: Poppins, sans-serif
 
 @font-face
   font-family: 'all-round-gothic'
@@ -37,9 +37,14 @@ section
     padding: 0 80px 0 80px
     flex: 1
 
+    h1, h2
+      font-family: $secondary-font
+      font-weight: 600
+
     h1
       font-size: 24px
       color: #F2B231
+
 
     h2.bigTitle
       font-size: 72px
@@ -62,7 +67,6 @@ span
     color: #7C7C7C
 
     a, b
-      color: white
       font-weight: 300
       color: #E22000
 
