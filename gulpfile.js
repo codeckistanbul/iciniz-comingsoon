@@ -110,7 +110,7 @@ function style() {
 function myWatchTasks() {
     gulp.watch(['./src/assets/css/*.sass'], style);
     gulp.watch(['./src/assets/js/*.js'], scriptsDev);
-    gulp.watch(['./src/presentation/**/*.html'], compile)
+    gulp.watch(['./src/templates/**/*.html'], compile)
 }
 
 const dev = gulp.parallel(gulp.series(clean, style, copyFiles, scriptsDev, compile, connectGulp), myWatchTasks);
